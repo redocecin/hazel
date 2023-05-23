@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{account}}/{{repository}}</title>
+    <title>GPTee</title>
 
     <style>
       body {
@@ -127,25 +127,18 @@
     <div id="wrap">
       <main>
           <header>
-            <div id="release">{{account}}/<span id="repo">{{repository}}</span></div>
+            <div id="release">GPTee <div id="version">{{version}}</div></div>
             <div id="date">{{date}}</div>
           </header>
 
           <div id="list">
             {{#each files}}
               <div class="item">
-                <div class="fileType">{{@key}}: <span class="url"><a href={{this.url}}>/latest/{{@key}}</a></span></div>
+                <div class="fileType">{{@key}}: <span class="url"><a href="https://{{url}}/download/{{@key}}?update=true">/latest/{{@key}}</a></span></div>
                 <div class="size">{{this.size}} MB</div>
               </div>
             {{/each}}
           </div>
-
-          <footer>
-            <div id="version">{{version}}</div>
-            <a id="release-notes" href={{releaseNotes}}>Release Notes</a>
-            <a id="all-releases" href={{allReleases}}>All Releases</a>
-            <a href={{github}}>GitHub</a>
-          </footer>
       </main>
     </div>
   </body>
